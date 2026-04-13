@@ -99,14 +99,15 @@ function CitasPage({ token, usuario, onLogout }) {
     }
   }
 
-  useEffect(() => {
-    if (paciente?.id) {
-      cargarCitasPaciente(paciente.id)
-      return
-    }
+ // eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
+  if (paciente?.id) {
+    cargarCitasPaciente(paciente.id)
+    return
+  }
 
-    setCitasPaciente([])
-  }, [paciente])
+  setCitasPaciente([])
+}, [paciente])
 
   const formatFecha = (fechaIso) => {
     return new Date(fechaIso).toLocaleString('es-CO', {

@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const db = require('../db')
+const db = require('../config/db')
 const { authRequired, requireMedico } = require('../middleware/auth')
 
 router.use(authRequired, requireMedico)

@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs')
-const db = require('./db')
+const db = require('../config/db')
 
 async function crearAdmin() {
   const nombre = process.argv[2] || 'Administrador Principal'

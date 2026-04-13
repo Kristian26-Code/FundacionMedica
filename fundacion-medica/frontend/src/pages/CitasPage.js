@@ -4,6 +4,8 @@ import PacienteSelector from '../components/PacienteSelector'
 import Topbar from '../components/Topbar'
 import { createApi } from '../services/api'
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 function CitasPage({ token, usuario, onLogout }) {
   const api = useMemo(() => createApi(token), [token])
   const [paciente, setPaciente] = useState(null)

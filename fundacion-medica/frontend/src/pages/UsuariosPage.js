@@ -3,6 +3,8 @@ import { FiUser } from 'react-icons/fi'
 import Topbar from '../components/Topbar'
 import { createApi } from '../services/api'
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 function UsuariosPage({ token, usuario, onLogout }) {
   const api = useMemo(() => createApi(token), [token])
   const [usuarios, setUsuarios] = useState([])

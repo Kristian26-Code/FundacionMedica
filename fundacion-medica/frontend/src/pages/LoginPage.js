@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
-import { API_URL } from '../services/api'
+import { BASE_URL } from '../services/api'
 
 function LoginPage({ onLogin }) {
   const [loginData, setLoginData] = useState({ email: '', password: '' })
@@ -12,7 +12,7 @@ function LoginPage({ onLogin }) {
     setError('')
     setLoading(true)
     try {
-      const { data } = await axios.post(`${API_URL}/auth/login`, loginData)
+      const { data } = await axios.post(`${BASE_URL}/auth/login`, loginData)
       onLogin(data)
     } catch (err) {
       setError(err.response?.data?.error || 'No se pudo iniciar sesión')

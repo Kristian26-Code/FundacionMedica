@@ -4,7 +4,7 @@ export const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/
 
 export function createApi(token) {
   return axios.create({
-    baseURL: API_URL,
+    baseURL: BASE_URL,
     headers: token ? { Authorization: `Bearer ${token}` } : {}
   })
 }
